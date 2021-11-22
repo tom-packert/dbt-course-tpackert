@@ -2,7 +2,7 @@
 version: 2
 
 models:
-  - name: users
+  - name: stg_users
     description: ""
     columns:
       - name: user_id
@@ -10,7 +10,7 @@ models:
         tests:
           - unique
           - not_null
-  - name: addresses
+  - name: stg_addresses
     description: ""
     columns:
       - name: address_id
@@ -18,7 +18,7 @@ models:
         tests:
           - unique
           - not_null
-  - name: orders
+  - name: stg_orders
     description: ""
     columns:
       - name: order_id
@@ -26,14 +26,14 @@ models:
         tests:
           - unique
           - not_null
-  - name: order_items
+  - name: stg_order_items
     description: ""
     columns:
       - name: order_id
         description: "The primary key for this table"
         tests:
           - not_null
-  - name: products
+  - name: stg_products
     description: ""
     columns:
       - name: product_id
@@ -41,7 +41,7 @@ models:
         tests:
           - unique
           - not_null
-  - name: promos
+  - name: stg_promos
     description: ""
     columns:
       - name: promo_id
@@ -49,7 +49,7 @@ models:
         tests:
           - unique
           - not_null
-  - name: events
+  - name: stg_events
     description: ""
     columns:
       - name: event_id

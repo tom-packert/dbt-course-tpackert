@@ -1,0 +1,60 @@
+
+version: 2
+
+models:
+  - name: users
+    description: ""
+    columns:
+      - name: user_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+  - name: addresses
+    description: ""
+    columns:
+      - name: address_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+  - name: orders
+    description: ""
+    columns:
+      - name: order_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+  - name: order_items
+    description: ""
+    columns:
+      - name: order_id
+        description: "The primary key for this table"
+        tests:
+          - not_null
+  - name: products
+    description: ""
+    columns:
+      - name: product_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+  - name: promos
+    description: ""
+    columns:
+      - name: promo_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+  - name: events
+    description: ""
+    columns:
+      - name: event_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+          

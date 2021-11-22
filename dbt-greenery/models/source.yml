@@ -1,0 +1,32 @@
+version: 2
+
+sources:
+
+  - name: greenery # name of the source 
+    schema: public # this is the schema our raw data lives in
+    database: dbt # this is the name of our database
+
+    quoting:
+      database: false
+      schema: false
+      identifier: false
+
+    freshness:
+      warn_after: {count: 24, period: hour}
+      error_after: {count: 48, period: hour}
+
+    tables:
+      - name: users
+        description: list of users
+      - name: addresses
+        description: the user addresses
+      - name: orders
+        description: the orders placed
+      - name: products
+        description: list of products that can be ordered
+      - name: order_items
+        description: join table for orders to order_items
+      - name: promos
+        description: promotions applid to orders
+      - name: events
+        description: the list of events that occur
